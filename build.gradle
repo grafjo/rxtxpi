@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = "de.synyx.rxtxpi.App"
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+    mavenRepo name: "rxtx", url: "https://raw.github.com/grafjo/rxtx/master/releases/"
+}
+
+dependencies {
+    compile 'gnu.io:rxtx:2.2pre2'
+    compile 'org.slf4j:slf4j-api:1.7.2'
+    compile 'org.slf4j:slf4j-simple:1.7.2'
+}
